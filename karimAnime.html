@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>أنمي فوق 8.5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Reem+Kufi:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <p class="kicker">قائمة تقييمات</p>
+    <h1>أنمي فوق 8.5</h1>
+    <p class="lede">مسلسلات أنمي تجاوز تقييمها العالمي 8.5 من 10، مع التقييم العربي حيث وجدنا له مصدراً.</p>
+    <dl class="stats">
+      <div><dt>تقييم عالمي فوق 8.5</dt><dd id="statGlobal">0</dd></div>
+      <div><dt>الاثنان معاً فوق 8.5</dt><dd id="statBoth">0</dd></div>
+    </dl>
+  </header>
+
+  <section class="controls" aria-label="البحث والتصفية">
+    <div class="field">
+      <label for="q">ابحث بالاسم</label>
+      <input id="q" type="search" placeholder="مثال: فريرن أو Hunter" autocomplete="off">
+    </div>
+    <div class="field">
+      <span class="label" id="modeLabel">عرض</span>
+      <div class="seg" role="group" aria-labelledby="modeLabel">
+        <button type="button" data-mode="all" aria-pressed="true">الكل</button>
+        <button type="button" data-mode="both" aria-pressed="false">الاثنان فوق 8.5</button>
+        <button type="button" data-mode="noar" aria-pressed="false">بلا تقييم عربي</button>
+      </div>
+    </div>
+    <div class="field">
+      <label for="sort">ترتيب</label>
+      <select id="sort">
+        <option value="mal">الأعلى عالمياً</option>
+        <option value="ar">الأعلى عربياً</option>
+        <option value="year">الأحدث</option>
+      </select>
+    </div>
+  </section>
+
+  <p id="count" class="count" aria-live="polite"></p>
+  <main id="grid" class="grid"></main>
+
+  <footer class="notes">
+    <p><strong>المصدر.</strong> التقييم العالمي من MyAnimeList وهو لقطة تقريبية تتغير يومياً. التقييم العربي مأخوذ من مواقع عربية للمشاهدة والقوائم، ويظهر مع اسم موقعه. ما لا نعرف له تقييماً عربياً يظهر «غير متوفر».</p>
+    <p><strong>للتعديل.</strong> أضف أو غيّر أي تقييم من مصفوفة <code>ANIME</code> في ملف <code>script.js</code>.</p>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
